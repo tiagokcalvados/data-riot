@@ -4,12 +4,15 @@ A responsive front page featuring the supplied Data Riot front-page artwork. Mob
 
 The main page currently shows the introduction and artwork only. Video tiles and preview windows are removed; videos will return later with a separate setup.
 
+On desktop the wordmark, introduction, and logo sit next to each other across the top. The logo uses a transparent cutout, and the bottom credit is slightly larger. Mobile retains the original portrait artwork.
+
 ## Files
 
 - `index.html`: the page.
 - `styles.css`: responsive layout.
 - `videos.js` and `video-layout-reference.png`: earlier video concept files, retained but not loaded by the main page.
 - `data-riot-front-page.png`: the current supplied front-page artwork, unchanged.
+- `data-riot-logo-transparent.png`: transparent logo cutout made with the built-in image-editing tool.
 - `data-riot-ep.png`: the previous EP artwork, retained as an archive.
 - `vercel.json`: static hosting configuration.
 
