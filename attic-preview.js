@@ -14,6 +14,9 @@ function timeLabel(seconds) {
 }
 
 function updateFilmControls() {
+  if (filmVideo.videoWidth && filmVideo.videoHeight) {
+    filmDialog.style.setProperty('--film-ratio', filmVideo.videoWidth / filmVideo.videoHeight);
+  }
   const duration = Number.isFinite(filmVideo.duration) ? filmVideo.duration : 0;
   filmToggle.textContent = filmVideo.paused ? 'Play' : 'Pause';
   filmSeek.max = duration;
