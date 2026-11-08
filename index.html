@@ -13,8 +13,8 @@
   <meta property="og:image:height" content="1672">
   <title>Data Riot</title>
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="styles.css?v=attic-portrait-2">
-  <script src="attic-preview.js" defer></script>
+  <link rel="stylesheet" href="styles.css?v=film-window-1">
+  <script src="attic-preview.js?v=film-window-1" defer></script>
 </head>
 <body>
   <main class="front-page">
@@ -47,10 +47,8 @@
           <figure class="attic-experiment">
             <figcaption>Data Riot –<br>M83 Attic<br>Lights</figcaption>
             <div class="attic-frame">
-              <video id="attic-video" playsinline preload="none" poster="attic-lights-poster.jpg" aria-label="Attic Lights video">
-                <source src="attic-lights.mp4" type="video/mp4">
-              </video>
-              <button class="attic-play" type="button" aria-label="Play Attic Lights" aria-pressed="false" title="Click or tap to play Attic Lights"></button>
+              <img src="attic-lights-poster.jpg" width="360" height="640" alt="" loading="lazy">
+              <button class="attic-play" type="button" data-film-src="attic-lights.mp4" data-film-title="Data Riot – M83 Attic Lights" aria-label="Open Attic Lights video" aria-haspopup="dialog" title="Click or tap to watch Attic Lights"></button>
             </div>
             <p class="attic-status" role="status" aria-live="polite"></p>
           </figure>
@@ -69,5 +67,18 @@
       </footer>
     </section>
   </main>
+  <dialog class="film-dialog" aria-labelledby="film-title">
+    <header class="film-window-header">
+      <h2 id="film-title">Data Riot film</h2>
+      <button class="film-close" type="button" autofocus>Close</button>
+    </header>
+    <video class="film-video" playsinline preload="none" aria-label="Film player"></video>
+    <div class="film-controls">
+      <button class="film-toggle" type="button">Pause</button>
+      <input class="film-seek" type="range" min="0" max="0" step="0.1" value="0" aria-label="Video position">
+      <output class="film-time">0:00 / 0:00</output>
+    </div>
+    <p class="film-error" role="status" aria-live="polite"></p>
+  </dialog>
 </body>
 </html>

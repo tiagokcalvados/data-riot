@@ -88,13 +88,25 @@ body { margin: 0; min-height: 100svh; }
 }
 .attic-experiment figcaption { margin-bottom: 9px; text-align: center; font-size: clamp(13px, 1.05vw, 18px); line-height: 1.15; font-weight: 700; }
 .attic-frame { position: relative; aspect-ratio: 4 / 5; overflow: hidden; border: 1px solid #ffffffb3; background: #07101b; }
-.attic-frame video { display: block; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
-.attic-frame.has-started video { object-fit: contain; }
+.attic-frame img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .attic-play { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; padding: 0; background: transparent; cursor: pointer; touch-action: manipulation; }
 .attic-play:focus-visible { outline: 3px solid #fff; outline-offset: -5px; }
 .attic-play:disabled { cursor: wait; }
 .attic-status { min-height: 0; margin: 6px 0 0; font-size: 13px; line-height: 1.3; text-align: center; }
 .attic-status:empty { display: none; }
+.film-dialog { width: min(94vw, 960px); max-width: none; max-height: 94svh; padding: 14px; border: 1px solid #ffffff99; border-radius: 4px; background: #07101b; color: #fff; box-shadow: 0 20px 90px #0009; }
+.film-dialog::backdrop { background: #001127cf; }
+body:has(.film-dialog[open]) { overflow: hidden; }
+.film-window-header { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 10px; }
+.film-window-header h2 { margin: 0; font-size: clamp(16px, 1.4vw, 20px); }
+.film-dialog button { padding: 7px 13px; border: 1px solid #ffffff80; border-radius: 3px; background: #12243a; color: #fff; font: inherit; font-size: 14px; cursor: pointer; }
+.film-dialog button:focus-visible, .film-seek:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+.film-video { display: block; width: 100%; height: min(72svh, 780px); object-fit: contain; background: #000; }
+.film-controls { display: flex; align-items: center; gap: 12px; margin-top: 10px; }
+.film-seek { flex: 1; min-width: 30px; accent-color: #fff; cursor: pointer; }
+.film-time { flex-shrink: 0; font-size: 13px; font-variant-numeric: tabular-nums; }
+.film-error { margin: 10px 0 0; font-size: 14px; }
+.film-error:empty { display: none; }
 .desktop-tagline { margin: 7px 0 0; color: #fff; text-shadow: 0 1px 2px #002456, 0 2px 8px #002456a6; font-style: italic; font-weight: 600; font-size: clamp(17px, 1.3vw, 20px); line-height: 1.25; }
 .desktop-logo { display: block; width: 100%; height: auto; }
 .desktop-footer { align-items: flex-end; }

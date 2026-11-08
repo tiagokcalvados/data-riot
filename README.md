@@ -2,7 +2,9 @@
 
 A responsive front page featuring the supplied Data Riot front-page artwork. Mobile displays the original portrait artwork unchanged at full screen width. Desktop uses a full-window landscape layout with the same wording, scene, logo, wordmark, and signature. SVG windows reuse parts of the original image without generating or modifying the image file. Short phone screens can scroll, and browser zoom remains available.
 
-Desktop includes one small portrait film tile, **Data Riot – M83 Attic Lights**, below the header. Click or tap the frame to play with audio; click or tap again to pause. Enter/Space also operates the accessible button. There is no play icon or native control overlay. The poster fills the 4:5 frame; playback preserves the full video's proportions. The video loads only after interaction. Other films are not connected yet.
+Desktop includes one small portrait film tile, **Data Riot – M83 Attic Lights**, below the header. Click/tap the frame to open a larger modal player with audio. The player automatically closes when the film ends, returning focus to the original small tile. Close or Escape returns early and stops playback. Text-only Pause/Play and a seek bar are below the video; the thumbnail has no play icon. Playback preserves the full video's proportions and loads only after interaction. Other films are not connected yet.
+
+Future film buttons can use `data-film-src` and `data-film-title` to open the same shared player. Only one film can play in this window at a time.
 
 On desktop the wordmark, introduction, and logo sit next to each other across the top. The logo uses a transparent cutout, and the bottom credit is slightly larger. Mobile retains the original portrait artwork.
 
