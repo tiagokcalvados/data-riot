@@ -4,7 +4,7 @@
   "outputDirectory": ".",
   "headers": [
     {
-      "source": "/data-riot-ep.png",
+      "source": "/data-riot-front-page.png",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=3600" }
       ]

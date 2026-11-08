@@ -1,12 +1,13 @@
 # Data Riot
 
-A minimal trial page featuring the Data Riot EP artwork. Project direction and further features will follow.
+A responsive front page featuring the supplied Data Riot front-page artwork, unchanged. Desktop fits the entire portrait image to the available screen height; mobile uses the full screen width with the original proportions. Short phone screens can scroll, and browser zoom remains available.
 
 ## Files
 
 - `index.html`: the page.
 - `styles.css`: responsive layout.
-- `data-riot-ep.png`: the supplied EP artwork, unchanged.
+- `data-riot-front-page.png`: the current supplied front-page artwork, unchanged.
+- `data-riot-ep.png`: the previous EP artwork, retained as an archive.
 - `vercel.json`: static hosting configuration.
 
 ## Vercel

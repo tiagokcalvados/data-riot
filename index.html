@@ -3,27 +3,29 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#10110e">
-  <meta name="description" content="Data Riot. No rules, just noise. A first look at the Data Riot EP artwork.">
+  <meta name="theme-color" content="#063ba8">
+  <meta name="description" content="Data Riot. Experimental audiovisual explorations from a sound lab in an attic in Amsterdam West.">
   <meta property="og:title" content="Data Riot">
-  <meta property="og:description" content="No rules, just noise.">
+  <meta property="og:description" content="Experimental audiovisual explorations from a sound lab in an attic in Amsterdam West.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="/data-riot-ep.png">
+  <meta property="og:image" content="https://data-riot.vercel.app/data-riot-front-page.png">
+  <meta property="og:image:width" content="941">
+  <meta property="og:image:height" content="1672">
   <title>Data Riot</title>
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=front-page-1">
 </head>
 <body>
-  <header class="masthead">
-    <h1>Data Riot</h1>
-    <span class="edition">EP / first signal</span>
-  </header>
-  <main>
-    <figure>
-      <img src="data-riot-ep.png" width="1254" height="1254" fetchpriority="high" alt="Data Riot — No rules, just noise, EP. Cover artwork of a burning toaster floating in a tree-lined canal.">
-      <figcaption>No rules, just noise.</figcaption>
-    </figure>
+  <main class="front-page">
+    <h1 class="visually-hidden">Data Riot</h1>
+    <img class="front-page-artwork" src="data-riot-front-page.png" width="941" height="1672" fetchpriority="high" alt="Data Riot front page: white lettering and the Data Riot Sound Lab logo over a blue sky and an Amsterdam canal." aria-describedby="about-data-riot">
+    <section class="visually-hidden" id="about-data-riot" aria-label="About Data Riot">
+      <p>Experimental audiovisual explorations from a sound lab in an attic in Amsterdam West.</p>
+      <p>A lifelong love of vinyl records, books about music and science, shaped by a constant curiosity for science, nature and architecture.</p>
+      <p>Music, image and sound, guitars, bass, synthesizers. Everyday photographs and video footage become raw material for spontaneous audiovisual experiments, where colours, shapes, movement and sound collide.</p>
+      <p>Built through an ongoing dialogue between human creativity and AI, DATA RIOT combines original photography, video footage, sound and experimentation with ChatGPT as a creative collaborator and Codex as the digital builder.</p>
+      <p>Tiago K Calvados</p>
+    </section>
   </main>
-  <footer><span>Data Riot</span><span>Trial page · more to come</span></footer>
 </body>
 </html>
