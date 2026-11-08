@@ -13,7 +13,8 @@
   <meta property="og:image:height" content="1672">
   <title>Data Riot</title>
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="styles.css?v=compact-white-header-1">
+  <link rel="stylesheet" href="styles.css?v=attic-portrait-2">
+  <script src="attic-preview.js" defer></script>
 </head>
 <body>
   <main class="front-page">
@@ -38,10 +39,22 @@
           <p class="desktop-tagline">Experimental audiovisual explorations from a sound lab in an attic in Amsterdam West.</p>
         </div>
         <div class="desktop-introduction" id="about-data-riot">
-          <p>A lifelong love of vinyl records, books on music and science, shaped by a constant curiosity for science, nature and architecture. Music, image and sound, guitars, bass, synthesizers and everyday photographs and video footage become raw material for spontaneous audiovisual experiments, where colours, shapes, movement and noise collide.</p>
+          <p>A lifelong love of vinyl records, books on music and science, shaped by a constant curiosity for science, nature and architecture. Music, image and sound, guitars, bass, synthesizers and everyday photographs and video footage become raw material for spontaneous audiovisual experiments, where colours, <span id="shapes-anchor">shapes</span>, movement and noise collide.</p>
         </div>
         <img class="desktop-logo" src="data-riot-logo-transparent.png" width="1426" height="1103" alt="Data Riot Sound Lab, Amsterdam West">
       </header>
+      <section class="video-gallery" aria-label="Data Riot films">
+          <figure class="attic-experiment">
+            <figcaption>Data Riot –<br>M83 Attic<br>Lights</figcaption>
+            <div class="attic-frame">
+              <video id="attic-video" playsinline preload="none" poster="attic-lights-poster.jpg" aria-label="Attic Lights video">
+                <source src="attic-lights.mp4" type="video/mp4">
+              </video>
+              <button class="attic-play" type="button" aria-label="Play Attic Lights" aria-pressed="false" title="Click or tap to play Attic Lights"></button>
+            </div>
+            <p class="attic-status" role="status" aria-live="polite"></p>
+          </figure>
+      </section>
       <footer class="desktop-footer">
         <p class="desktop-credit">Built through an ongoing dialogue between human creativity and AI, DATA RIOT combines original photography, video footage, sound and experimentation with ChatGPT as a creative collaborator and Codex as the digital builder.</p>
         <div class="desktop-signoff">
