@@ -1,6 +1,6 @@
 # Data Riot
 
-A responsive front page featuring the supplied Data Riot front-page artwork, unchanged. Desktop fits the entire portrait image to the available screen height; mobile uses the full screen width with the original proportions. Short phone screens can scroll, and browser zoom remains available.
+A responsive front page featuring the supplied Data Riot front-page artwork. Mobile displays the original portrait artwork unchanged at full screen width. Desktop uses a full-window landscape layout with the same wording, scene, logo, wordmark, and signature. SVG windows reuse parts of the original image without generating or modifying the image file. Short phone screens can scroll, and browser zoom remains available.
 
 ## Files
 

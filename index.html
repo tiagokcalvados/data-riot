@@ -13,18 +13,48 @@
   <meta property="og:image:height" content="1672">
   <title>Data Riot</title>
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="styles.css?v=front-page-1">
+  <link rel="stylesheet" href="styles.css?v=landscape-1">
 </head>
 <body>
   <main class="front-page">
     <h1 class="visually-hidden">Data Riot</h1>
     <img class="front-page-artwork" src="data-riot-front-page.png" width="941" height="1672" fetchpriority="high" alt="Data Riot front page: white lettering and the Data Riot Sound Lab logo over a blue sky and an Amsterdam canal." aria-describedby="about-data-riot">
-    <section class="visually-hidden" id="about-data-riot" aria-label="About Data Riot">
-      <p>Experimental audiovisual explorations from a sound lab in an attic in Amsterdam West.</p>
-      <p>A lifelong love of vinyl records, books about music and science, shaped by a constant curiosity for science, nature and architecture.</p>
-      <p>Music, image and sound, guitars, bass, synthesizers. Everyday photographs and video footage become raw material for spontaneous audiovisual experiments, where colours, shapes, movement and sound collide.</p>
-      <p>Built through an ongoing dialogue between human creativity and AI, DATA RIOT combines original photography, video footage, sound and experimentation with ChatGPT as a creative collaborator and Codex as the digital builder.</p>
-      <p>Tiago K Calvados</p>
+    <section class="desktop-front-page" aria-label="Data Riot sound lab">
+      <!-- Reuse the original scene and branding through SVG windows; no altered image files. -->
+      <svg class="desktop-scene" viewBox="0 400 941 1050" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
+        <image href="data-riot-front-page.png" width="941" height="1672" />
+      </svg>
+      <div class="scene-shade" aria-hidden="true"></div>
+      <header class="desktop-header">
+        <div class="desktop-introduction" id="about-data-riot">
+          <svg class="desktop-wordmark" viewBox="35 20 500 103" aria-hidden="true" focusable="false">
+            <defs>
+              <filter id="wordmark-ink" color-interpolation-filters="sRGB">
+                <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  1.8 0 0 0 -0.2" />
+              </filter>
+            </defs>
+            <image href="data-riot-front-page.png" width="941" height="1672" filter="url(#wordmark-ink)" />
+          </svg>
+          <p class="desktop-tagline">Experimental audiovisual explorations from<br class="wide-break"> a sound lab in an attic in Amsterdam West.</p>
+          <p>A lifelong love of vinyl records, books about music and science, shaped by a constant curiosity for science, nature and architecture.</p>
+          <p>Music, image and sound, guitars, bass, synthesizers. Everyday photographs and video footage become raw material for spontaneous audiovisual experiments, where colours, shapes, movement and sound collide.</p>
+        </div>
+        <svg class="desktop-logo" viewBox="650 15 280 225" role="img" aria-label="Data Riot Sound Lab, Amsterdam West">
+          <image href="data-riot-front-page.png" width="941" height="1672" />
+        </svg>
+      </header>
+      <footer class="desktop-footer">
+        <p class="desktop-credit">Built through an ongoing dialogue between human creativity and AI, DATA RIOT combines original photography, video footage, sound and experimentation with ChatGPT as a creative collaborator and Codex as the digital builder.</p>
+        <div class="desktop-signoff">
+          <svg class="desktop-signature" viewBox="730 1535 195 48" role="img" aria-label="Tiago K Calvados">
+            <image href="data-riot-front-page.png" width="941" height="1672" filter="url(#wordmark-ink)" />
+          </svg>
+          <a class="home-link" href="/" aria-label="Data Riot home">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m3 10 9-7 9 7M5 9v12h14V9M9 21v-7h6v7" /></svg>
+            <span>Home</span>
+          </a>
+        </div>
+      </footer>
     </section>
   </main>
 </body>
