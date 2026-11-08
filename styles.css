@@ -70,9 +70,10 @@ body { margin: 0; min-height: 100svh; }
 }
 
 .desktop-wordmark { display: block; width: 100%; height: auto; filter: drop-shadow(0 3px 4px #00245680); }
+.desktop-brand { min-width: 0; }
 .desktop-introduction p { margin: 6px 0 0; }
 .desktop-introduction p:first-child { margin-top: 0; }
-.desktop-tagline { color: #000; text-shadow: none; font-style: italic; font-size: clamp(17px, 1.3vw, 20px); line-height: 1.25; }
+.desktop-tagline { margin: 7px 0 0; color: #fff; text-shadow: 0 1px 2px #002456, 0 2px 8px #002456a6; font-style: italic; font-weight: 600; font-size: clamp(17px, 1.3vw, 20px); line-height: 1.25; }
 .desktop-logo { display: block; width: 100%; height: auto; }
 .desktop-footer { align-items: flex-end; }
 
