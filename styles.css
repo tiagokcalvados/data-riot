@@ -10,6 +10,7 @@
 body { margin: 0; min-height: 100svh; }
 
 .front-page {
+  position: relative;
   min-height: 100svh;
   display: grid;
   place-items: center;
@@ -167,8 +168,41 @@ body:has(.film-dialog[open]) { overflow: hidden; }
 }
 
 @media (max-width: 600px) {
-  /* The same uncropped composition at full phone width. Short phones can scroll. */
-  .front-page { align-items: start; }
+  /* Anchor the tiles to the artwork's sky, independently of phone height. */
+  .front-page { display: block; min-height: 0; }
   .front-page-artwork { display: block; width: 100%; height: auto; }
-  .desktop-front-page { display: none; }
+  .desktop-front-page { display: contents; }
+  .desktop-scene, .scene-shade, .desktop-header, .desktop-footer { display: none; }
+  .video-gallery {
+    position: absolute;
+    top: 26.45%;
+    left: 6%;
+    right: 6%;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 3vw 2vw;
+    padding: 0;
+  }
+  .attic-experiment { display: flex; flex-direction: column; width: auto; min-width: 0; }
+  .attic-frame { flex-shrink: 0; margin-top: auto; }
+  .attic-experiment figcaption {
+    min-height: 3.36em;
+    margin-bottom: 1.4vw;
+    font-size: clamp(8px, 2.35vw, 14px);
+    line-height: 1.12;
+  }
+  .attic-play { -webkit-tap-highlight-color: #ffffff55; }
+  .film-dialog {
+    width: min(calc(100vw - 16px), calc((100svh - 160px - env(safe-area-inset-top) - env(safe-area-inset-bottom)) * var(--film-ratio, .5625) + 22px));
+    max-height: calc(100svh - 16px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+    padding: 10px;
+  }
+  .film-window-header { gap: 10px; }
+  .film-window-header h2 { font-size: 16px; line-height: 1.2; }
+  .film-dialog button { min-height: 44px; min-width: 44px; touch-action: manipulation; }
+  .film-close { flex-shrink: 0; }
+  .film-controls { gap: 8px; }
+  .film-seek { height: 44px; margin: 0; touch-action: pan-x; }
+  .film-time { font-size: 12px; }
 }

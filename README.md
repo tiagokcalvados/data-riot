@@ -1,12 +1,12 @@
 # Data Riot
 
-A responsive front page featuring the supplied Data Riot front-page artwork. Mobile displays the original portrait artwork unchanged at full screen width. Desktop uses a full-window landscape layout with the same wording, scene, logo, wordmark, and signature. SVG windows reuse parts of the original image without generating or modifying the image file. Short phone screens can scroll, and browser zoom remains available.
+A responsive front page featuring the supplied Data Riot front-page artwork. Mobile displays the original portrait artwork at full screen width, with all ten tappable film tiles arranged in two rows of five in the open sky below the introduction and above the trees and houses. The artwork itself is unchanged. Desktop uses a full-window landscape layout with the same wording, scene, logo, wordmark, and signature. SVG windows reuse parts of the original image without generating or modifying the image file. Short phone screens can scroll, and browser zoom remains available.
 
 Desktop includes all ten numbered films from the supplied Data Riot folder, in order: **M83 Attic Lights**, **New Dimension**, **Two Cities One Sun**, **Broken Toaster**, **Liquid Sun**, **Friendly Fires Boat**, **Rothko vs Pollock**, **Sound Sphere**, **Hydraulic Quantum Flow**, and **Cosmic Spiral**. The small portrait tiles sit side by side below the header and wrap onto another row when needed. Click/tap any frame to open a larger modal player with audio. The player automatically closes when the film ends, returning focus to that film's small tile. Close or Escape returns early and stops playback. Text-only Pause/Play and a seek bar are below the video; the thumbnails have no play icons. Playback preserves each full video's proportions and loads only after interaction.
 
 The larger window fits the video's original aspect ratio, without black side spaces, stretching, or cropping. Its size is limited by the browser width and height; it does not fill the desktop. Each film's dimensions set the shared player's proportions when metadata loads. Close, Escape, and automatic return at the end still work.
 
-Future film buttons can use `data-film-src` and `data-film-title` to open the same shared player. Only one film can play in this window at a time.
+The same buttons and shared player work on touchscreens and desktop. On phones the player uses nearly the screen's full width when height allows, limits its height to the phone's visible screen, and keeps the original film proportions. Close, Pause/Play, and the seek control have touch-friendly targets. Tapping a tile opens playback directly; completion returns to that tile. Only one film can play at a time.
 
 On desktop the wordmark, introduction, and logo sit next to each other across the top. The logo uses a transparent cutout, and the bottom credit is slightly larger. Mobile retains the original portrait artwork.
 
