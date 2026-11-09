@@ -2,7 +2,7 @@
 
 A responsive front page featuring the supplied Data Riot front-page artwork. Mobile displays the original portrait artwork unchanged at full screen width. Desktop uses a full-window landscape layout with the same wording, scene, logo, wordmark, and signature. SVG windows reuse parts of the original image without generating or modifying the image file. Short phone screens can scroll, and browser zoom remains available.
 
-Desktop includes three small portrait film tiles, **Data Riot – M83 Attic Lights**, **Data Riot – New Dimension**, and **Data Riot – Two Cities One Sun**, side by side below the header. Click/tap any frame to open a larger modal player with audio. The player automatically closes when the film ends, returning focus to that film's small tile. Close or Escape returns early and stops playback. Text-only Pause/Play and a seek bar are below the video; the thumbnails have no play icons. Playback preserves each full video's proportions and loads only after interaction. Other films are not connected yet.
+Desktop includes all ten numbered films from the supplied Data Riot folder, in order: **M83 Attic Lights**, **New Dimension**, **Two Cities One Sun**, **Broken Toaster**, **Liquid Sun**, **Friendly Fires Boat**, **Rothko vs Pollock**, **Sound Sphere**, **Hydraulic Quantum Flow**, and **Cosmic Spiral**. The small portrait tiles sit side by side below the header and wrap onto another row when needed. Click/tap any frame to open a larger modal player with audio. The player automatically closes when the film ends, returning focus to that film's small tile. Close or Escape returns early and stops playback. Text-only Pause/Play and a seek bar are below the video; the thumbnails have no play icons. Playback preserves each full video's proportions and loads only after interaction.
 
 The larger window fits the video's original aspect ratio, without black side spaces, stretching, or cropping. Its size is limited by the browser width and height; it does not fill the desktop. Each film's dimensions set the shared player's proportions when metadata loads. Close, Escape, and automatic return at the end still work.
 
@@ -21,6 +21,10 @@ On desktop the wordmark, introduction, and logo sit next to each other across th
 - `new-dimension-poster.jpg`: still from video 2.
 - `two-cities-one-sun.mp4`: complete video 3, with original H.264 video and AAC audio copied without re-encoding and optimized for web playback.
 - `two-cities-one-sun-poster.jpg`: still from video 3.
+- `broken-toaster.mp4`: complete video 4 converted from MPEG-4 Part 2 to browser-compatible H.264, preserving the original AAC audio.
+- `liquid-sun.mp4`, `rothko-vs-pollock.mp4`, `hydraulic-quantum-flow.mp4`, and `cosmic-spiral.mp4`: complete videos 5, 7, 9, and 10, with their original H.264 video and AAC audio copied without re-encoding.
+- `friendly-fires-boat.mp4` and `sound-sphere.mp4`: complete videos 6 and 8, compressed as H.264 web copies to fit GitHub's browser upload limit, preserving their original dimensions and AAC audio.
+- Each film has a matching `-poster.jpg` extracted from that film. All new MP4 files are optimized for web playback; source files remain untouched.
 - `videos.js` and `video-layout-reference.png`: earlier video concept files, retained but not loaded by the main page.
 - `data-riot-front-page.png`: the current supplied front-page artwork, unchanged.
 - `data-riot-logo-transparent.png`: transparent logo cutout made with the built-in image-editing tool.
