@@ -19,6 +19,7 @@ body { margin: 0; min-height: 100svh; }
 .front-page-artwork {
   display: none;
 }
+.mobile-home-link { display: none; }
 
 .desktop-front-page {
   isolation: isolate;
@@ -173,6 +174,8 @@ body:has(.film-dialog[open]) { overflow: hidden; }
   /* Anchor the tiles to the artwork's sky, independently of phone height. */
   .front-page { display: block; min-height: 0; }
   .front-page-artwork { display: block; width: 100%; height: auto; }
+  .mobile-home-link { display: block; position: absolute; top: 96.5%; right: 2.5%; width: 19%; height: 4.4%; min-height: 44px; transform: translateY(-50%); border-radius: 999px; touch-action: manipulation; }
+  .mobile-home-link:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
   .desktop-front-page { display: contents; }
   .desktop-scene, .scene-shade, .desktop-header, .desktop-footer { display: none; }
   .video-gallery {
