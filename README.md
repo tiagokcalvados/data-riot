@@ -36,4 +36,4 @@ On desktop the wordmark, introduction, and logo sit next to each other across th
 
 Import this repository into the **Data Riot** Vercel team. Use the **Other** framework preset, the repository root, no build command, and `.` as the output directory. The production branch is `main`.
 
-This project has no dependencies, database, Vercel Blob store, analytics, or connection to Project Stories. The supplied cover image is served with the website files.
+This project has no dependencies, database, or Vercel Blob store. The supplied cover image is served with the website files. Both Home links return to Project Stories. Visitor counts use the private Vercel Web Analytics dashboard; see `ANALYTICS.md`.
