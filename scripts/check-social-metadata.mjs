@@ -8,7 +8,7 @@ export const approved = Object.freeze({
   title: 'Data Riot',
   description: 'Experimental audiovisual explorations from a sound lab in an attic in Amsterdam West.',
   url: 'https://data-riot.vercel.app/',
-  image: 'https://data-riot.vercel.app/data-riot-social-card-20261119.jpg',
+  image: 'https://data-riot.vercel.app/data-riot-social-card-20261119-centered.jpg',
 });
 export const cacheTestUrl = `${approved.url}?v=20261119`;
 

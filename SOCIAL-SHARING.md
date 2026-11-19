@@ -3,8 +3,8 @@
 - Page and canonical URL: https://data-riot.vercel.app/
 - Standard HTML, Open Graph and Twitter title: **Data Riot**
 - Standard meta, Open Graph and Twitter description: **Experimental audiovisual explorations from a sound lab in an attic in Amsterdam West.**
-- Open Graph and Twitter image: https://data-riot.vercel.app/data-riot-social-card-20261119.jpg
-- Image: 1200 × 630 JPEG, using the existing Sound Lab logo and that exact original sentence. No new promotional copy.
+- Open Graph and Twitter image: https://data-riot.vercel.app/data-riot-social-card-20261119-centered.jpg
+- Image: 1200 × 630 JPEG, using the existing Sound Lab logo and that exact original sentence. Both elements fit inside its central 630 × 630 square so compact square thumbnails retain the complete logo. No new promotional copy. The app may still truncate the description or choose a compact card; the image design does not force its layout.
 
 ## History audit
 
