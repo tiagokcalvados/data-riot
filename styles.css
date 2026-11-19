@@ -156,7 +156,7 @@ body:has(.film-dialog[open]) { overflow: hidden; }
   grid-template-columns: repeat(8, minmax(0, 1fr));
   gap: clamp(6px, 1.5vw, 20px);
   width: min(860px, 100%);
-  padding: 2px 0 22px;
+  padding: 2px 0 28px;
 }
 .reaction-button {
   display: flex;
@@ -213,7 +213,7 @@ body:has(.film-dialog[open]) { overflow: hidden; }
 .reaction-button[aria-pressed="true"] .reaction-count { border-color: #80eaff; background: #0053a6; box-shadow: 0 0 9px #55dcff; }
 .reaction-button:focus-visible { outline: 2px solid white; outline-offset: 2px; }
 .reaction-button:disabled { cursor: wait; opacity: .65; }
-.reaction-status { position: absolute; bottom: 0; left: 0; right: 0; margin: 0; text-align: center; font-size: 12px; line-height: 1.2; text-shadow: 0 1px 3px #001533; }
+.reaction-status { position: absolute; bottom: 0; left: 50%; width: max-content; max-width: 100%; transform: translateX(-50%); margin: 0; padding: 3px 10px; border: 1px solid #ffe36a80; border-radius: 999px; background: #061f46; color: #ffe36a; text-align: center; font-size: 12px; line-height: 1.25; font-weight: 700; text-shadow: none; }
 .reaction-noscript { grid-column: 1 / -1; margin: 0; text-align: center; font-size: 12px; }
 @media (hover: hover) { .reaction-button:hover { transform: translateY(-3px); background: #003e8266; } }
 @media (prefers-reduced-motion: reduce) { .reaction-button { transition: none; } }
@@ -253,7 +253,7 @@ body:has(.film-dialog[open]) { overflow: hidden; }
   .reaction-count { padding: 0 1px; border-width: 1px; font-size: 3.2vw; }
   .reaction-maze svg { width: 6.7vw; height: 6.7vw; }
   .reaction-question .reaction-symbol { font-size: 8.5vw; -webkit-text-stroke-width: .8px; }
-  .reaction-status { top: auto; bottom: calc(100% + 1vw); font-size: clamp(8px, 1.9vw, 11px); }
+  .reaction-status { top: auto; bottom: calc(100% + 1vw); font-size: clamp(11px, 2.7vw, 14px); }
   .video-gallery {
     position: absolute;
     top: 26.45%;
