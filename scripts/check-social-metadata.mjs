@@ -57,7 +57,7 @@ export function checkSocialMetadata(html, { url = approved.url } = {}) {
 }
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
-  for (const path of ['../index.html', '../dist/index.html']) {
+  for (const path of ['../index.html', '../dist/homepage.html']) {
     checkSocialMetadata(await readFile(new URL(path, import.meta.url), 'utf8'));
     console.log(`${path}: approved original text, initial HTML tags and duplicate checks passed`);
   }

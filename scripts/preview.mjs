@@ -19,7 +19,7 @@ const types = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript', '
 createServer(async (request, response) => {
   const url = new URL(request.url, origin);
   if (url.pathname === '/api/reactions') return reactions(request, response);
-  const pathname = url.pathname === '/' ? '/index.html' : url.pathname;
+  const pathname = url.pathname === '/' ? (url.searchParams.get('v') === '20261119' ? '/share-v20261119.html' : '/homepage.html') : url.pathname === '/index.html' ? '/homepage.html' : url.pathname;
   if (!/^\/[\w.-]+$/.test(pathname)) { response.writeHead(404).end(); return; }
   try {
     const data = await readFile(new URL(pathname.slice(1), root));

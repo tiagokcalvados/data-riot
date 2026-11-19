@@ -20,6 +20,8 @@ For a live audit, fetch the raw initial document with WhatsApp, Facebook, Twitte
 
 Verify the image returns HTTP 200, `image/jpeg` and 1200 × 630 dimensions. Requests carrying crawler user agents verify the server response; they do not prove that those platforms refreshed their own caches.
 
+The build serves the unchanged source `index.html` through `dist/homepage.html` and a root rewrite. It intentionally removes the physical `dist/index.html`, because filesystem precedence would otherwise bypass the conditional query rewrite. `/index.html` remains a supported URL and rewrites to the same homepage. Source filenames and the visible page body are preserved.
+
 The visible body, gallery, styles, video player, reactions, counters and analytics must remain unchanged during this metadata audit. Before publishing, compare the body and existing working files with the previous commit.
 
 ## Platform refresh

@@ -8,7 +8,9 @@
       "source": "/",
       "has": [{ "type": "query", "key": "v", "value": "20261119" }],
       "destination": "/share-v20261119.html"
-    }
+    },
+    { "source": "/", "destination": "/homepage.html" },
+    { "source": "/index.html", "destination": "/homepage.html" }
   ],
   "redirects": [
     { "source": "/watch", "destination": "/", "permanent": true },
