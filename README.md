@@ -12,7 +12,7 @@ On desktop the wordmark, introduction, and logo sit next to each other across th
 
 ## Files
 
-Social sharing uses `social-preview-20261119.jpg`, a 1200 × 630 snapshot of the complete current homepage with twelve films and the reaction icons. The export compacts the layout to fit the card and omits changing reaction totals. Open Graph and Twitter metadata point to its absolute production URL; the interactive page layout is unchanged. When replacing this image, use a new filename and update both sets of metadata. Facebook may need a fresh scrape through its Sharing Debugger to replace a cached preview.
+Social sharing uses `data-riot-social-card-20261119.jpg`, a readable 1200 × 630 card made from the existing Sound Lab logo and the recovered original introduction. Its layout source is `scripts/social-preview.html`. Open Graph and Twitter metadata point to its absolute production URL; the interactive page layout is unchanged. Previous image URLs remain available for existing shares. Run `npm run check:social` to check the approved text, duplicate tags, initial HTML and matching image metadata. See `SOCIAL-SHARING.md` for history and verification details.
 
 Share the main address, **https://data-riot.vercel.app/**. Its canonical URL and Open Graph URL both identify the homepage. The original sharing wording is title **Data Riot** and description **Experimental audiovisual explorations from a sound lab in an attic in Amsterdam West.** The earlier `/watch` and `/sound-lab` links, including their `.html` forms, permanently redirect to the homepage. They no longer generate separate sharing pages. The already-published `sound-lab-preview.jpg` image remains available for existing social cards.
 

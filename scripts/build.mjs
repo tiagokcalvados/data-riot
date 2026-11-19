@@ -1,7 +1,9 @@
-import { mkdir, readdir, copyFile, rm } from 'node:fs/promises';
+import { mkdir, readdir, copyFile, rm, readFile } from 'node:fs/promises';
+import { checkSocialMetadata } from './check-social-metadata.mjs';
 
 const root = new URL('../', import.meta.url);
 const output = new URL('dist/', root);
+checkSocialMetadata(await readFile(new URL('index.html', root), 'utf8'));
 await mkdir(output, { recursive: true });
 for (const file of await readdir(root)) {
   if (/\.(html|css|png|jpg|mp4)$/.test(file) || ['attic-preview.js', 'visitor-analytics.js', 'reactions.js'].includes(file)) {

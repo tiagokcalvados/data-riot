@@ -5,7 +5,8 @@
   "scripts": {
     "build": "node scripts/build.mjs",
     "test": "node --test test/*.test.mjs",
-    "preview": "node scripts/preview.mjs"
+    "preview": "node scripts/preview.mjs",
+    "check:social": "node scripts/check-social-metadata.mjs"
   },
   "engines": {
     "node": "24.x"
