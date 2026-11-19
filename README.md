@@ -12,6 +12,8 @@ On desktop the wordmark, introduction, and logo sit next to each other across th
 
 ## Files
 
+Social sharing uses `social-preview-20261119.jpg`, a 1200 × 630 snapshot of the complete current homepage with twelve films and the reaction icons. The export compacts the layout to fit the card and omits changing reaction totals. Open Graph and Twitter metadata point to its absolute production URL; the interactive page layout is unchanged. When replacing this image, use a new filename and update both sets of metadata. Facebook may need a fresh scrape through its Sharing Debugger to replace a cached preview.
+
 - `index.html`: the page.
 - `styles.css`: responsive layout.
 - `attic-preview.js`: Attic Lights play/pause interaction.
