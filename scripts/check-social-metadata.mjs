@@ -10,12 +10,13 @@ export const approved = Object.freeze({
   url: 'https://data-riot.vercel.app/',
   image: 'https://data-riot.vercel.app/data-riot-social-card-20261119.jpg',
 });
+export const cacheTestUrl = `${approved.url}?v=20261119`;
 
 function attributes(tag) {
   return Object.fromEntries([...tag.matchAll(/([\w:-]+)\s*=\s*(["'])(.*?)\2/gs)].map(match => [match[1].toLowerCase(), match[3]]));
 }
 
-export function checkSocialMetadata(html) {
+export function checkSocialMetadata(html, { url = approved.url } = {}) {
   const heads = [...html.matchAll(/<head\b[^>]*>([\s\S]*?)<\/head>/gi)];
   assert.equal(heads.length, 1, 'Exactly one initial HTML head is required');
   const head = heads[0][1];
@@ -31,7 +32,7 @@ export function checkSocialMetadata(html) {
   for (const [key, expected] of Object.entries({
     description: approved.description,
     'og:title': approved.title, 'og:description': approved.description,
-    'og:url': approved.url, 'og:type': 'website',
+    'og:url': url, 'og:type': 'website',
     'og:image': approved.image, 'og:image:secure_url': approved.image,
     'og:image:type': 'image/jpeg', 'og:image:width': '1200', 'og:image:height': '630',
     'twitter:card': 'summary_large_image', 'twitter:title': approved.title,
@@ -49,10 +50,10 @@ export function checkSocialMetadata(html) {
   assert.equal(titles[0][1], approved.title);
   const canonicals = [...head.matchAll(/<link\b[^>]*>/gi)].map(([tag]) => attributes(tag)).filter(attrs => attrs.rel?.toLowerCase() === 'canonical');
   assert.equal(canonicals.length, 1, 'One canonical URL required');
-  assert.equal(canonicals[0].href, approved.url);
+  assert.equal(canonicals[0].href, url);
   assert.ok(!head.includes('Audiovisual films from Amsterdam'), 'Unapproved promotional title must not return');
   assert.ok(!head.includes('Explore twelve experimental audiovisual films'), 'Unapproved promotional description must not return');
-  return approved;
+  return { ...approved, url };
 }
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
@@ -60,5 +61,7 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
     checkSocialMetadata(await readFile(new URL(path, import.meta.url), 'utf8'));
     console.log(`${path}: approved original text, initial HTML tags and duplicate checks passed`);
   }
+  checkSocialMetadata(await readFile(new URL('../dist/share-v20261119.html', import.meta.url), 'utf8'), { url: cacheTestUrl });
+  console.log('Versioned cache test: original copy and distinct sharing identity passed');
   console.log(JSON.stringify(approved, null, 2));
 }

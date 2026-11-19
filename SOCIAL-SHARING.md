@@ -14,9 +14,11 @@ The earliest EP trial page (`8b68a19`) used `data-riot-ep.png`, a square cover s
 
 ## Verification
 
-Run `npm run build` followed by `npm run check:social`. The check requires exactly one of each requested metadata tag, the original title/description, matching absolute image URLs, one canonical URL and one standard title in the initial HTML. It rejects the unapproved promotional wording. It checks source and generated HTML directly, without JavaScript execution.
+Run `npm run build` followed by `npm run check:social`. The check requires exactly one of each requested metadata tag, the original title/description, matching absolute image URLs, one canonical URL and one standard title in the initial HTML. It rejects the unapproved promotional wording. It checks source, generated homepage and versioned diagnostic HTML directly, without JavaScript execution.
 
-For a live audit, fetch the raw initial document with WhatsApp, Facebook, Twitter, desktop and mobile user agents. Check both `https://data-riot.vercel.app/` and the authorized cache test `https://data-riot.vercel.app/?v=20261119`. Verify the image returns HTTP 200, `image/jpeg` and 1200 × 630 dimensions. Requests carrying crawler user agents verify the server response; they do not prove that those platforms refreshed their own caches.
+For a live audit, fetch the raw initial document with WhatsApp, Facebook, Twitter, desktop and mobile user agents. Check both `https://data-riot.vercel.app/` and the authorized cache test `https://data-riot.vercel.app/?v=20261119`. The main address retains its original canonical URL and Open Graph URL. The versioned diagnostic response uses the versioned address for both identity tags, because `og:url` identifies the social graph object. Both return identical original copy, image and visible page content. The diagnostic is an internal rewrite on the same homepage path, not a new visitor-facing page address. This tests a cache-reuse hypothesis; it does not prove the cause of WhatsApp's behavior.
+
+Verify the image returns HTTP 200, `image/jpeg` and 1200 × 630 dimensions. Requests carrying crawler user agents verify the server response; they do not prove that those platforms refreshed their own caches.
 
 The visible body, gallery, styles, video player, reactions, counters and analytics must remain unchanged during this metadata audit. Before publishing, compare the body and existing working files with the previous commit.
 

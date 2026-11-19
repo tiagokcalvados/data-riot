@@ -16,6 +16,8 @@ Social sharing uses `data-riot-social-card-20261119.jpg`, a readable 1200 × 630
 
 Share the main address, **https://data-riot.vercel.app/**. Its canonical URL and Open Graph URL both identify the homepage. The original sharing wording is title **Data Riot** and description **Experimental audiovisual explorations from a sound lab in an attic in Amsterdam West.** The earlier `/watch` and `/sound-lab` links, including their `.html` forms, permanently redirect to the homepage. They no longer generate separate sharing pages. The already-published `sound-lab-preview.jpg` image remains available for existing social cards.
 
+The user-authorized cache diagnostic `https://data-riot.vercel.app/?v=20261119` has a matching versioned canonical/Open Graph identity. It uses the exact same introduction, image, page body and working features. The main address remains unchanged. See `SOCIAL-SHARING.md` for the distinction between server verification and a confirmed WhatsApp refresh.
+
 - `index.html`: the page.
 - `styles.css`: responsive layout.
 - `attic-preview.js`: Attic Lights play/pause interaction.

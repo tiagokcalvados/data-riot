@@ -3,6 +3,13 @@
   "framework": null,
   "outputDirectory": "dist",
   "buildCommand": "npm run build",
+  "rewrites": [
+    {
+      "source": "/",
+      "has": [{ "type": "query", "key": "v", "value": "20261119" }],
+      "destination": "/share-v20261119.html"
+    }
+  ],
   "redirects": [
     { "source": "/watch", "destination": "/", "permanent": true },
     { "source": "/watch.html", "destination": "/", "permanent": true },
