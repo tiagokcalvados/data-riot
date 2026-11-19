@@ -16,6 +16,8 @@ Social sharing uses `social-preview-20261119.jpg`, a 1200 × 630 snapshot of the
 
 For a fresh Facebook post while its old homepage preview remains cached, share **https://data-riot.vercel.app/watch**. The build generates this complete page from `index.html`, with its own canonical and `og:url` address and the current sharing image. Vercel rewrites the address internally; it does not redirect visitors or crawlers to the old homepage URL. Videos, Home links, reactions and visitor counting work as on the homepage, with the same saved reaction totals. The original homepage remains available.
 
+The preferred sharing address is **https://data-riot.vercel.app/sound-lab**, introduced after restoring the original wording: title **Data Riot** and description **Experimental audiovisual explorations from a sound lab in an attic in Amsterdam West.** It is generated from the same source with its own canonical URL, Open Graph URL and image URL (`sound-lab-preview.jpg`, the same complete preview image). Earlier links remain working. Paste this new address into a new social message to request a fresh preview; forwarding an old message can retain its saved card.
+
 - `index.html`: the page.
 - `styles.css`: responsive layout.
 - `attic-preview.js`: Attic Lights play/pause interaction.

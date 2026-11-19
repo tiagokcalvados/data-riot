@@ -12,8 +12,14 @@ for (const file of await readdir(root)) {
 // without redirecting back to the cached homepage object. Both pages are
 // generated from one source, including all films and shared reactions.
 const homepage = await readFile(new URL('index.html', root), 'utf8');
-const watch = homepage
-  .replace('<link rel="canonical" href="https://data-riot.vercel.app/">', '<link rel="canonical" href="https://data-riot.vercel.app/watch">')
-  .replace('<meta property="og:url" content="https://data-riot.vercel.app/">', '<meta property="og:url" content="https://data-riot.vercel.app/watch">');
-await writeFile(new URL('watch.html', output), watch);
+for (const path of ['watch', 'sound-lab']) {
+  let sharingPage = homepage
+    .replace('<link rel="canonical" href="https://data-riot.vercel.app/">', `<link rel="canonical" href="https://data-riot.vercel.app/${path}">`)
+    .replace('<meta property="og:url" content="https://data-riot.vercel.app/">', `<meta property="og:url" content="https://data-riot.vercel.app/${path}">`);
+  if (path === 'sound-lab') {
+    sharingPage = sharingPage.replaceAll('https://data-riot.vercel.app/social-preview-20261119.jpg', 'https://data-riot.vercel.app/sound-lab-preview.jpg');
+    await copyFile(new URL('social-preview-20261119.jpg', root), new URL('sound-lab-preview.jpg', output));
+  }
+  await writeFile(new URL(`${path}.html`, output), sharingPage);
+}
 console.log('Built the public Data Riot files in dist/.');

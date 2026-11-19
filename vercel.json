@@ -4,7 +4,8 @@
   "outputDirectory": "dist",
   "buildCommand": "npm run build",
   "rewrites": [
-    { "source": "/watch", "destination": "/watch.html" }
+    { "source": "/watch", "destination": "/watch.html" },
+    { "source": "/sound-lab", "destination": "/sound-lab.html" }
   ],
   "headers": [
     {
