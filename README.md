@@ -31,10 +31,11 @@ On desktop the wordmark, introduction, and logo sit next to each other across th
 - `data-riot-front-page.png`: the current supplied front-page artwork, unchanged.
 - `data-riot-logo-transparent.png`: transparent logo cutout made with the built-in image-editing tool.
 - `data-riot-ep.png`: the previous EP artwork, retained as an archive.
-- `vercel.json`: static hosting configuration.
+- `reactions.js`, `api/reactions.js` and `lib/`: shared anonymous reaction buttons and their private counter; see `REACTIONS.md`.
+- `vercel.json`: static hosting and Node function configuration.
 
 ## Vercel
 
-Import this repository into the **Data Riot** Vercel team. Use the **Other** framework preset, the repository root, no build command, and `.` as the output directory. The production branch is `main`.
+Import this repository into the **Data Riot** Vercel team. Use the **Other** framework preset, the repository root, `npm run build`, and `dist` as the output directory (also specified in `vercel.json`). The production branch is `main`. Vercel builds the Node function at `/api/reactions` separately from the public files.
 
-This project has no dependencies, database, or Vercel Blob store. The supplied cover image is served with the website files. Both Home links return to Project Stories. Visitor counts use the private Vercel Web Analytics dashboard; see `ANALYTICS.md`.
+The official `@vercel/blob` dependency saves reactions in the private `data-riot-reactions` store. Connect `BLOB_READ_WRITE_TOKEN` on Vercel for production and preview. The supplied cover image is served with the website files. Both Home links return to Project Stories. Visitor counts use the private Vercel Web Analytics dashboard; see `ANALYTICS.md`.

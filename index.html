@@ -13,9 +13,10 @@
   <meta property="og:image:height" content="1672">
   <title>Data Riot</title>
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="styles.css?v=twelve-films">
+  <link rel="stylesheet" href="styles.css?v=reactions-1">
   <script src="attic-preview.js?v=film-fitted-window-2" defer></script>
   <script src="visitor-analytics.js?v=1" defer></script>
+  <script src="reactions.js?v=1" defer></script>
 </head>
 <body>
   <main class="front-page">
@@ -132,6 +133,18 @@
               <button class="attic-play" type="button" data-film-src="lego-wormhole.mp4" data-film-title="Data Riot – Lego Wormhole" aria-label="Open Lego Wormhole video" aria-haspopup="dialog" title="Click or tap to watch Lego Wormhole"></button>
             </div>
           </figure>
+      </section>
+      <section class="reactions" aria-label="React to Data Riot" aria-describedby="reaction-status">
+        <button class="reaction-button" type="button" data-reaction="heart" data-label="Love" aria-label="Love" aria-pressed="false"><span class="reaction-symbol" aria-hidden="true">❤️</span><span class="reaction-count" aria-hidden="true">—</span></button>
+        <button class="reaction-button" type="button" data-reaction="fire" data-label="Fire" aria-label="Fire" aria-pressed="false"><span class="reaction-symbol" aria-hidden="true">🔥</span><span class="reaction-count" aria-hidden="true">—</span></button>
+        <button class="reaction-button" type="button" data-reaction="laugh" data-label="Laughing" aria-label="Laughing" aria-pressed="false"><span class="reaction-symbol" aria-hidden="true">😂</span><span class="reaction-count" aria-hidden="true">—</span></button>
+        <button class="reaction-button" type="button" data-reaction="cry" data-label="Crying" aria-label="Crying" aria-pressed="false"><span class="reaction-symbol" aria-hidden="true">😭</span><span class="reaction-count" aria-hidden="true">—</span></button>
+        <button class="reaction-button" type="button" data-reaction="wow" data-label="Surprised" aria-label="Surprised" aria-pressed="false"><span class="reaction-symbol" aria-hidden="true">😮</span><span class="reaction-count" aria-hidden="true">—</span></button>
+        <button class="reaction-button reaction-maze" type="button" data-reaction="maze" data-label="Intrigued" aria-label="Intrigued" aria-pressed="false"><span class="reaction-symbol" aria-hidden="true"><svg viewBox="0 0 64 64" focusable="false"><path d="M59 59H5V5h54v54H17V17h30v30H29V29h6v6M42 5v10M5 42h12M29 59V47M59 29H47"/></svg></span><span class="reaction-count" aria-hidden="true">—</span></button>
+        <button class="reaction-button reaction-question" type="button" data-reaction="question" data-label="Curious" aria-label="Curious" aria-pressed="false"><span class="reaction-symbol" aria-hidden="true">?</span><span class="reaction-count" aria-hidden="true">—</span></button>
+        <button class="reaction-button" type="button" data-reaction="mindblown" data-label="Mind blown" aria-label="Mind blown" aria-pressed="false"><span class="reaction-symbol" aria-hidden="true">🤯</span><span class="reaction-count" aria-hidden="true">—</span></button>
+        <p class="reaction-status" id="reaction-status" role="status" aria-live="polite">Loading reactions…</p>
+        <noscript><p class="reaction-noscript">Enable JavaScript to see and add reactions.</p></noscript>
       </section>
       <footer class="desktop-footer">
         <p class="desktop-credit">Built through an ongoing dialogue between human creativity and AI, DATA RIOT combines original photography, video footage, sound and experimentation with ChatGPT as a creative collaborator and Codex as the digital builder.</p>

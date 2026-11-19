@@ -149,6 +149,75 @@ body:has(.film-dialog[open]) { overflow: hidden; }
 .home-link svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2.4; }
 .home-link:focus-visible { outline: 3px solid #ff1919; outline-offset: 5px; }
 
+.reactions {
+  position: relative;
+  align-self: center;
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: clamp(6px, 1.5vw, 20px);
+  width: min(860px, 100%);
+  padding: 2px 0 22px;
+}
+.reaction-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 0;
+  min-height: 44px;
+  padding: 3px;
+  border: 0;
+  border-radius: 12px;
+  color: white;
+  background: transparent;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: #ffffff33;
+  transition: transform .15s ease, background .15s ease;
+}
+.reaction-symbol {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 64px;
+  font-family: 'Segoe UI Emoji', 'Apple Color Emoji', sans-serif;
+  font-size: 54px;
+  line-height: 1;
+  filter: drop-shadow(0 0 7px #ff7d2bbf);
+}
+[data-reaction="heart"] .reaction-symbol { filter: drop-shadow(0 0 8px #ff142ee6); }
+.reaction-count {
+  display: block;
+  width: 100%;
+  max-width: 74px;
+  padding: 1px 4px;
+  border: 2px solid white;
+  border-radius: 999px;
+  background: #001e58a6;
+  font: 700 22px/1.1 Arial, sans-serif;
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+}
+.reaction-maze svg { width: 58px; height: 58px; fill: none; stroke: white; stroke-width: 2; }
+.reaction-maze .reaction-symbol { filter: drop-shadow(0 0 3px #00cfff) drop-shadow(0 0 7px #00aaff); }
+.reaction-question .reaction-symbol {
+  color: #54038b;
+  -webkit-text-stroke: 1.5px white;
+  font-family: Arial, sans-serif;
+  font-size: 70px;
+  font-weight: 400;
+  filter: drop-shadow(0 0 3px #f000ff) drop-shadow(0 0 8px #ef00ff);
+}
+.reaction-button[aria-pressed="true"] { background: #003e8266; }
+.reaction-button[aria-pressed="true"] .reaction-count { border-color: #80eaff; background: #0053a6; box-shadow: 0 0 9px #55dcff; }
+.reaction-button:focus-visible { outline: 2px solid white; outline-offset: 2px; }
+.reaction-button:disabled { cursor: wait; opacity: .65; }
+.reaction-status { position: absolute; bottom: 0; left: 0; right: 0; margin: 0; text-align: center; font-size: 12px; line-height: 1.2; text-shadow: 0 1px 3px #001533; }
+.reaction-noscript { grid-column: 1 / -1; margin: 0; text-align: center; font-size: 12px; }
+@media (hover: hover) { .reaction-button:hover { transform: translateY(-3px); background: #003e8266; } }
+@media (prefers-reduced-motion: reduce) { .reaction-button { transition: none; } }
+
 @media (min-width: 601px) and (max-height: 650px) {
   .desktop-front-page { gap: 10px; padding-block: 14px; }
   .desktop-header { --wordmark-width: 280px; --logo-width: 130px; }
@@ -178,6 +247,13 @@ body:has(.film-dialog[open]) { overflow: hidden; }
   .mobile-home-link:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
   .desktop-front-page { display: contents; }
   .desktop-scene, .scene-shade, .desktop-header, .desktop-footer { display: none; }
+  .reactions { position: absolute; top: 79.5%; left: 4%; right: 4%; width: auto; gap: 1vw; padding: 0; }
+  .reaction-button { gap: .8vw; padding: 0; border-radius: 5px; }
+  .reaction-symbol { height: 7.4vw; font-size: 6.7vw; }
+  .reaction-count { padding: 0 1px; border-width: 1px; font-size: 3.2vw; }
+  .reaction-maze svg { width: 6.7vw; height: 6.7vw; }
+  .reaction-question .reaction-symbol { font-size: 8.5vw; -webkit-text-stroke-width: .8px; }
+  .reaction-status { top: auto; bottom: calc(100% + 1vw); font-size: clamp(8px, 1.9vw, 11px); }
   .video-gallery {
     position: absolute;
     top: 26.45%;
