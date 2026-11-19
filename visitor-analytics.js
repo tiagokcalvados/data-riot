@@ -1,7 +1,7 @@
 (() => {
   if (window.location.hostname !== 'data-riot.vercel.app') return;
   if (navigator.doNotTrack === '1' || navigator.globalPrivacyControl === true) return;
-  const pagePaths = ['/', '/index.html', '/watch', '/watch.html', '/sound-lab', '/sound-lab.html'];
+  const pagePaths = ['/', '/index.html'];
   if (!pagePaths.includes(window.location.pathname)) return;
 
   window.va = window.va || function () {

@@ -3,9 +3,11 @@
   "framework": null,
   "outputDirectory": "dist",
   "buildCommand": "npm run build",
-  "rewrites": [
-    { "source": "/watch", "destination": "/watch.html" },
-    { "source": "/sound-lab", "destination": "/sound-lab.html" }
+  "redirects": [
+    { "source": "/watch", "destination": "/", "permanent": true },
+    { "source": "/watch.html", "destination": "/", "permanent": true },
+    { "source": "/sound-lab", "destination": "/", "permanent": true },
+    { "source": "/sound-lab.html", "destination": "/", "permanent": true }
   ],
   "headers": [
     {
