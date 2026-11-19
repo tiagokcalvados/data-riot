@@ -1,14 +1,15 @@
 (() => {
   if (window.location.hostname !== 'data-riot.vercel.app') return;
   if (navigator.doNotTrack === '1' || navigator.globalPrivacyControl === true) return;
-  if (!['/', '/index.html'].includes(window.location.pathname)) return;
+  const pagePaths = ['/', '/index.html', '/watch', '/watch.html'];
+  if (!pagePaths.includes(window.location.pathname)) return;
 
   window.va = window.va || function () {
     (window.vaq = window.vaq || []).push(arguments);
   };
   window.va('beforeSend', (event) => {
     const pageUrl = new URL(event.url);
-    if (event.type !== 'pageview' || !['/', '/index.html'].includes(pageUrl.pathname)) return null;
+    if (event.type !== 'pageview' || !pagePaths.includes(pageUrl.pathname)) return null;
     pageUrl.pathname = '/';
     pageUrl.search = '';
     pageUrl.hash = '';

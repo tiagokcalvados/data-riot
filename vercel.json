@@ -3,6 +3,9 @@
   "framework": null,
   "outputDirectory": "dist",
   "buildCommand": "npm run build",
+  "rewrites": [
+    { "source": "/watch", "destination": "/watch.html" }
+  ],
   "headers": [
     {
       "source": "/data-riot-front-page.png",

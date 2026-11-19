@@ -14,6 +14,8 @@ On desktop the wordmark, introduction, and logo sit next to each other across th
 
 Social sharing uses `social-preview-20261119.jpg`, a 1200 × 630 snapshot of the complete current homepage with twelve films and the reaction icons. The export compacts the layout to fit the card and omits changing reaction totals. Open Graph and Twitter metadata point to its absolute production URL; the interactive page layout is unchanged. When replacing this image, use a new filename and update both sets of metadata. Facebook may need a fresh scrape through its Sharing Debugger to replace a cached preview.
 
+For a fresh Facebook post while its old homepage preview remains cached, share **https://data-riot.vercel.app/watch**. The build generates this complete page from `index.html`, with its own canonical and `og:url` address and the current sharing image. Vercel rewrites the address internally; it does not redirect visitors or crawlers to the old homepage URL. Videos, Home links, reactions and visitor counting work as on the homepage, with the same saved reaction totals. The original homepage remains available.
+
 - `index.html`: the page.
 - `styles.css`: responsive layout.
 - `attic-preview.js`: Attic Lights play/pause interaction.
